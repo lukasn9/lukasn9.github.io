@@ -1,0 +1,200 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Maple Glazed Ham Recipe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        h1 {
+          color: white;
+          font-weight: bold;
+          font-family: "Roboto";
+          font-size: 3rem;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        body {
+          background-color: rgb(37, 37, 37);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+        }
+        main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          max-width: 1200px;
+        }
+        .recipe-container {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: flex-start;
+          padding: 20px;
+          margin: 0 auto;
+        }
+        .recipe-img {
+          margin-right: 20px;
+          margin-top: 40px;
+        }
+        .recipe-img amp-img {
+          border-radius: 10px;
+        }
+        .recipe-text {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          max-width: 600px;
+          margin-left: 50px;
+        }
+        #step_div {
+          font-family: "Roboto";
+          font-size: 1.3rem;
+          color: white;
+          margin: 20px auto;
+          width: 80%;
+          max-width: 800px;
+        }
+        .recipe-text p {
+          font-family: "Roboto";
+          font-size: 1.2rem;
+          color: white;
+          margin: 10px 0;
+        }
+        table {
+          margin-top: 20px;
+          font-family: "Roboto";
+          font-size: 1.2rem;
+          color: white;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        td, th {
+          border: 1px solid #636363;
+          text-align: left;
+          padding: 8px;
+        }
+        tr:nth-child(even) {
+          background-color: #464646;
+        }
+        .par {
+          margin-bottom: 10px;
+        }
+        .steps {
+          text-align: left;
+        }
+      </style>
+  </head>
+  <body>
+    <main>
+        <div class="recipe-container">
+            <div class="recipe-img">
+                <amp-img alt="Maple Glazed Ham" src="images/ham.webp" width="500" height="375" layout="fixed"></amp-img>
+            </div>
+            <div class="recipe-text">
+                <h1>Maple Glazed Ham</h1>
+                <p class="par">Maple Glazed Ham – this is the ham glaze to use when you want to add a special touch to your festive baked ham, but still keep it easy! The most incredible sticky glaze with the subtle fragrance of maple and hint of holiday spices, this is THE Christmas Ham recipe I make to gift and take to gatherings year after year.</p>
+                <table>
+                    <tr>
+                        <th>Ingredient</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td>Leg Ham</td>
+                        <td>5kg</td>
+                    </tr>
+                    <tr>
+                        <td>Cloves</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Oranges</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Water</td>
+                        <td>1 cup</td>
+                    </tr>
+                    <tr>
+                        <td>Maple Syrup</td>
+                        <td>3/4 cup</td>
+                    </tr>
+                    <tr>
+                        <td>Brown Sugar</td>
+                        <td>3/4 cup</td>
+                    </tr>
+                    <tr>
+                        <td>Dijon Mustard</td>
+                        <td>3 tbsp</td>
+                    </tr>
+                    <tr>
+                        <td>Ground Cinnamon</td>
+                        <td>3/4 tsp</td>
+                    </tr>
+                    <tr>
+                        <td>All Spice</td>
+                        <td>1/2 tsp</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="step_div">
+            <h1 class="steps">Step 1</h1>
+            <p>Take ham out of fridge 1 hour prior.</p>
+
+            <h1 class="steps">Step 2</h1>
+            <p>Preheat oven to 160°C / 320°F (140°C fan). Arrange shelf in lower third so the ham will be sitting in the centre of the oven (rather than in top half of oven).</p>
+
+            <h1 class="steps">Step 3</h1>
+            <p>Place the Glaze ingredients in a bowl and mix until combined – use whisk if needed.</p>
+
+            <h1 class="steps">Step 4</h1>
+            <p>Run small knife around bone handle, down each side of the ham, and under the rind on the cut face. (See video & photos in post)</p>
+
+            <h1 class="steps">Step 5</h1>
+            <p>Slide fingers under the rind on the cut face of the ham, and run them back and forth to loosen while pulling the rind back. Use knife if needed to slice off any residual rind.</p>
+
+            <h1 class="steps">Step 6</h1>
+            <p>Lightly cut 2.5cm / 1" diamonds across the fat surface of the ham, about 75% of the way into the fat. Avoid cutting into the meat.</p>
+
+            <h1 class="steps">Step 7</h1>
+            <p>Insert a clove in the intersection of the cross of each diamond on the surface (optional).</p>
+
+            <h1 class="steps">Step 8</h1>
+            <p>Place the ham in a large baking dish. Prop handle up on edge of pan + scrunched up foil so surface of the ham is level (for more even caramelisation).</p>
+
+            <h1 class="steps">Step 9</h1>
+            <p>Squeeze the juice of 1 orange (4 quarters) over the ham. Then place them along with the remaining orange into the baking dish around the ham.</p>
+
+            <h1 class="steps">Step 10</h1>
+            <p>Brush / spoon half the glaze all over the surface and cut face of the ham (don't worry about underside, glaze drips down into pan)</p>
+
+            <h1 class="steps">Step 11</h1>
+            <p>Pour the water in the baking dish, then place in the oven.</p>
+
+            <h1 class="steps">Step 12</h1>
+            <p>Bake for 1.5 – 2 hrs, basting very generously every 30 minutes with remainig glaze + juices in pan, or until sticky and golden.</p>
+
+            <h1 class="steps">Step 13</h1>
+            <p>Use foil patches to protect bits that brown faster than others – press on lightly, caramelisation won't peel off with the foil.</p>
+
+            <h1 class="steps">Step 14</h1>
+            <p>Allow to rest for at least 20 minutes before serving. Baste, baste, baste before serving – as the glaze in the pan cools, it thickens which means it "paints" the ham even better – but be sure to save pan juices for drizzling. </p>
+        </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

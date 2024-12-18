@@ -1,0 +1,182 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carbonara Recipe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        h1 {
+          color: white;
+          font-weight: bold;
+          font-family: "Roboto";
+          font-size: 3rem;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        body {
+          background-color: rgb(37, 37, 37);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+        }
+        main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          max-width: 1200px;
+        }
+        .recipe-container {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: flex-start;
+          padding: 20px;
+          margin: 0 auto;
+        }
+        .recipe-img {
+          margin-right: 20px;
+          margin-top: 40px;
+        }
+        .recipe-img amp-img {
+          border-radius: 10px;
+        }
+        .recipe-text {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          max-width: 600px;
+          margin-left: 50px;
+        }
+        #step_div {
+          font-family: "Roboto";
+          font-size: 1.3rem;
+          color: white;
+          margin: 20px auto;
+          width: 80%;
+          max-width: 800px;
+        }
+        .recipe-text p {
+          font-family: "Roboto";
+          font-size: 1.2rem;
+          color: white;
+          margin: 10px 0;
+        }
+        table {
+          margin-top: 20px;
+          font-family: "Roboto";
+          font-size: 1.2rem;
+          color: white;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        td, th {
+          border: 1px solid #636363;
+          text-align: left;
+          padding: 8px;
+        }
+        tr:nth-child(even) {
+          background-color: #464646;
+        }
+        .par {
+          margin-bottom: 10px;
+        }
+        .steps {
+          text-align: left;
+        }
+      </style>
+  </head>
+  <body>
+    <main>
+        <div class="recipe-container">
+            <div class="recipe-img">
+                <amp-img alt="Carbonara" src="images/carbonara.webp" width="500" height="375" layout="fixed"></amp-img>
+            </div>
+            <div class="recipe-text">
+                <h1>Carbonara</h1>
+                <p class="par">This is a real spaghetti carbonara recipe made the traditional Italian way, without a single drop of cream. It relies solely on egg and cheese to make a luscious, creamy carbonara sauce. Food fit for a king (or queen!) that proves simple can be magnificent.</p>
+                <table>
+                    <tr>
+                        <th>Ingredient</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td>Guanciale</td>
+                        <td>175g</td>
+                    </tr>
+                    <tr>
+                        <td>Eggs</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Egg Yolks</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Parmigiano Reggiano</td>
+                        <td>100g</td>
+                    </tr>
+                    <tr>
+                        <td>Black Pepper</td>
+                        <td>0.25 tsp</td>
+                    </tr>
+                    <tr>
+                        <td>Spaghetti</td>
+                        <td>400g</td>
+                    </tr>
+                    <tr>
+                        <td>Kosher Salt</td>
+                        <td>1 tbsp</td>
+                    </tr>
+                    <tr>
+                        <td>Pasta Water</td>
+                        <td>125 ml</td>
+                    </tr>
+                    <tr>
+                        <td>Garlic Clove</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="step_div">
+            <h1 class="steps">Step 1</h1>
+            <p>Guanciale – Cut into 0.5cm / 1/5" thick slices then into batons.</p>
+
+            <h1 class="steps">Step 2</h1>
+            <p>Carbonara sauce – Place eggs and yolks in a large bowl. Whisk to combine. Then stir in the parmesan and pepper.</p>
+
+            <h1 class="steps">Step 3</h1>
+            <p>Cook pasta – Bring 4 litres (4 quarts) of water to the boil with the salt. Add pasta and cook per the packet directions.</p>
+
+            <h1 class="steps">Step 4</h1>
+            <p>Reserve pasta water – Just before draining, scoop out 1 cup of pasta cooking water, then drain the pasta.</p>
+
+            <h1 class="steps">Step 5</h1>
+            <p>Cook guanciale – While the pasta is cooking, place guanciale in a non stick pan over medium high heat. Cook for 4 to 5 minutes until golden. No oil needed – as the guanciale heats up, the fat will melt so it fries in its own fat. If using garlic, add it in the last minute.</p>
+
+            <h1 class="steps">Step 6</h1>
+            <p>Pasta in pan – Tip the hot pasta into the pan and toss to coat in guanciale fat.</p>
+
+            <h1 class="steps">Step 7</h1>
+            <p>Mix pasta in sauce – Transfer the pasta and any residual fat in the pan into the bowl with the egg. Add 1/2 cup (125 ml) pasta cooking water. Stir vigorously using the handle of a wooden spoon for 1 minute and watch as the sauce transforms from watery to creamy and clings to the pasta strands!</p>
+
+            <h1 class="steps">Step 8</h1>
+            <p>Serve – Transfer into warm bowls. Serve immediately, garnished with a little extra parmigiana reggiano if desired, and a pinch of black pepper and finely chopped parsley.</p>
+        </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

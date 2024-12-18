@@ -13,238 +13,84 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom>
-      h1 {
-        color: white;
-        font-weight: bold;
-        font-family: "Roboto";
-        font-size: 3rem;
-        text-align: center;
-        margin-bottom: 100px;
-      }
       body {
         background-color: rgb(37, 37, 37);
+        font-family: "Roboto";
+        margin: 0;
+        padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        margin: 0;
-        }
-      .recipe-container {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-start;
+        min-height: 100vh;
+      }
+      main {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
         padding: 20px;
-        margin-bottom: 100px;
       }
-      .recipe-img {
-        margin-right: 20px;
+      h1 {
+        grid-column: span 3;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 3rem;
+        margin-bottom: 20px;
       }
-      .recipe-img amp-img {
-        border-radius: 10px;
-      }
-      .recipe-text {
+      .tile {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        max-width: 600px;
-        margin-left: 50px;
-      }
-      .recipe-text p {
-        font-family: "Roboto";
-        font-size: 1.2rem;
-        color: white;
-        margin: 10px 0;
-      }
-      table {
-        margin-top: 50px;
-        font-family: "Roboto";
-        font-size: 1.5rem;
-        color: white;
-        border-collapse: collapse;
-        width: 100%;
-      }
-      td, th {
-        border: 1px solid #636363;
-        text-align: left;
-        padding: 8px;
-      }
-      tr:nth-child(even) {
+        align-items: center;
+        justify-content: center;
         background-color: #464646;
+        border-radius: 10px;
+        overflow: hidden;
+        text-decoration: none;
+        color: white;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
       }
-      .par {
-        margin-bottom: 20px;
+      .tile:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+      .tile amp-img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+      .tile-title {
+        padding: 15px;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
     <main>
-        <h1>Recipe Website</h1>
-
-        <div class="recipe-container">
-            <div class="recipe-img">
-                <amp-img alt="Carbonara" src="images/carbonara.webp" width="600" height="500" layout="fixed"></amp-img>
-            </div>
-            <div class="recipe-text">
-                <h1>Carbonara</h1>
-                <p class="par">This is a real spaghetti carbonara recipe made the traditional Italian way, without a single drop of cream. It relies solely on egg and cheese to make a luscious, creamy carbonara sauce. Food fit for a king (or queen!) that proves simple can be magnificent.</p>
-                <table>
-                    <tr>
-                        <th>Ingredient</th>
-                        <th>Amount</th>
-                    </tr>
-                    <tr>
-                        <td>Guanciale</td>
-                        <td>175g</td>
-                    </tr>
-                    <tr>
-                        <td>Eggs</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Egg Yolks</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Parmigiano Reggiano</td>
-                        <td>100g</td>
-                    </tr>
-                    <tr>
-                        <td>Black Pepper</td>
-                        <td>0.25 tsp</td>
-                    </tr>
-                    <tr>
-                        <td>Spaghetti</td>
-                        <td>400g</td>
-                    </tr>
-                    <tr>
-                        <td>Kosher Salt</td>
-                        <td>1 tbsp</td>
-                    </tr>
-                    <tr>
-                        <td>Pasta Water</td>
-                        <td>125 ml</td>
-                    </tr>
-                    <tr>
-                        <td>Gralic Clove</td>
-                        <td>1</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <div class="recipe-container">
-            <div class="recipe-img">
-                <amp-img alt="Carbonara" src="images/salad.webp" width="600" height="500" layout="fixed"></amp-img>
-            </div>
-            <div class="recipe-text">
-                <h1>Green Papaya Salad</h1>
-                <p class="par">Listed in CNN Travel’s Top 50 Foods of the World, Green Papaya Salad is everything you know and love about South-East Asian salads. This Thai salad – called Som Tum – is a riot of fresh colours and crunchy textures, brought to life with a signature sour-sweet-savoury dressing spiked with a whack of fresh chilli. Now THIS is what I call a salad!!!</p>
-                <table>
-                    <tr>
-                        <th>Ingredient</th>
-                        <th>Amount</th>
-                    </tr>
-                    <tr>
-                        <td>Garlic</td>
-                        <td>2 tbsp</td>
-                    </tr>
-                    <tr>
-                        <td>Bird Eye Chillies</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <td>Dried Shrimp</td>
-                        <td>6 tbsp</td>
-                    </tr>
-                    <tr>
-                        <td>Palm Sugar</td>
-                        <td>150g</td>
-                    </tr>
-                    <tr>
-                        <td>Lime Juice</td>
-                        <td>125 ml</td>
-                    </tr>
-                    <tr>
-                        <td>Fish Sauce</td>
-                        <td>125 ml</td>
-                    </tr>
-                    <tr>
-                        <td>Roasted Peanuts</td>
-                        <td>1 cup</td>
-                    </tr>
-                    <tr>
-                        <td>Snake Beans</td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <td>Grape Tomato</td>
-                        <td>3 cups</td>
-                    </tr>
-                    <tr>
-                        <td>Green Papaya</td>
-                        <td>500g</td>
-                    </tr>
-                    <tr>
-                        <td>Thai Basil Leaves</td>
-                        <td>0.5 cups</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <div class="recipe-container">
-            <div class="recipe-img">
-                <amp-img alt="Carbonara" src="images/ham.webp" width="600" height="500" layout="fixed"></amp-img>
-            </div>
-            <div class="recipe-text">
-                <h1>Maple Glazed Ham</h1>
-                <p class="par">Maple Glazed Ham – this is the ham glaze to use when you want to add a special touch to your festive baked ham, but still keep it easy! The most incredible sticky glaze with the subtle fragrance of maple and hint of holiday spices, this is THE Christmas Ham recipe I make to gift and take to gatherings year after year.</p>
-                <table>
-                    <tr>
-                        <th>Ingredient</th>
-                        <th>Amount</th>
-                    </tr>
-                    <tr>
-                        <td>Leg Ham</td>
-                        <td>5kg</td>
-                    </tr>
-                    <tr>
-                        <td>Cloves</td>
-                        <td>30</td>
-                    </tr>
-                    <tr>
-                        <td>Oranges</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Water</td>
-                        <td>1 cup</td>
-                    </tr>
-                    <tr>
-                        <td>Maple Syrup</td>
-                        <td>3/4 cup</td>
-                    </tr>
-                    <tr>
-                        <td>Brown Sugar</td>
-                        <td>3/4 cup</td>
-                    </tr>
-                    <tr>
-                        <td>Dijon Mustard</td>
-                        <td>3 tbsp</td>
-                    </tr>
-                    <tr>
-                        <td>Ground Cinnamon</td>
-                        <td>3/4 tsp</td>
-                    </tr>
-                    <tr>
-                        <td>All Spice</td>
-                        <td>1/2 tsp</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+      <h1>Recipe Website</h1>
+      <a href="tzatziki.html" class="tile">
+        <amp-img alt="Tzatziki Chickpea Salad" src="images/tzatziki.webp" width="500" height="500" layout="responsive"></amp-img>
+        <div class="tile-title">Tzatziki Chickpea Salad</div>
+      </a>
+      <a href="carbonara.html" class="tile">
+        <amp-img alt="Carbonara" src="images/carbonara.webp" width="500" height="500" layout="responsive"></amp-img>
+        <div class="tile-title">Carbonara</div>
+      </a>
+      <a href="chicken_wings.html" class="tile">
+        <amp-img alt="New Orleans Chicken Wings" src="images/chicken.webp" width="500" height="500" layout="responsive"></amp-img>
+        <div class="tile-title">New Orleans Chicken Wings</div>
+      </a>
+      <a href="ham.html" class="tile">
+        <amp-img alt="Maple Glazed Ham" src="images/ham.webp" width="500" height="500" layout="responsive"></amp-img>
+        <div class="tile-title">Maple Glazed Ham</div>
+      </a>
+      <a href="salad.html" class="tile">
+        <amp-img alt="Green Papaya Salad" src="images/salad.webp" width="500" height="500" layout="responsive"></amp-img>
+        <div class="tile-title">Green Papaya Salad</div>
+      </a>
     </main>
     <script src="index.js"></script>
   </body>
